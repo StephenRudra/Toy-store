@@ -11,7 +11,24 @@ const Add = ()=>{
     const photo = form.photo.value;
     const details = form.details.value;
 
-    console.log(name, subCategory, price, quantity, seller, rating, photo, details)
+    const toys = {name, subCategory, price, quantity, seller, rating, photo, details};
+    console.log(toys)
+
+    fetch('http://localhost:5000/toys',{
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(toys)
+    })
+    .then(res => res.json())
+    .then(data =>{
+      console.log(data)
+      if(data.insertedId){
+       alert('Toy added!')
+      }
+      
+    })
   }
     return(
 
