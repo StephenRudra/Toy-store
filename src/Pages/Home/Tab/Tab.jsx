@@ -1,24 +1,24 @@
 import { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import Card from './Card';
 
 const toyTab = ()=>{
   const [toys, setToys] = useState([]);
   const [activeTab, setActiveTab] = useState("Excavation toys")
   useEffect(()=>{
-    fetch('http://localhost:5000/toys')
+    fetch(`http://localhost:5000/toys/${activeTab}`)
     .then(res => res.json())
     .then(data => setToys(data))
     .catch(error => console.log(error))
     
-  }, [])
+  }, [activeTab])
 
   const handleClick = (tabName) =>{
     setActiveTab(tabName)
     console.log(activeTab)
   }
-  const result = toys.filter((toy)=>toy.subCategory === activeTab);
-  console.log(result)
+  
   return(
     <div>
       <h2>toyz{toys.length}</h2>
@@ -29,17 +29,17 @@ const toyTab = ()=>{
         </Tab>
         
         
-        <Tab onClick={()=>handleClick("Lifting")}>Crane</Tab>
+        <Tab onClick={()=>handleClick("Lifting")}>Lifting</Tab>
 
         
         
       </TabList>
   
       <TabPanel>
-        <h2>Any content 1</h2>
+        <h2>{toys.map(toy => <Card key={toy._id} toy={toy}></Card>)}</h2>
       </TabPanel>
       <TabPanel>
-        <h2>Any content 2</h2>
+        <h2>{toys.map(toy => <Card key={toy._id} toy={toy}></Card>)}</h2>
       </TabPanel>
     </Tabs>
     </div>
