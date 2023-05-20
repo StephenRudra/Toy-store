@@ -3,6 +3,7 @@ import Banner from "../Banner/Banner";
 import Tabs from "../Tab/Tab";
 import { useEffect, useState } from "react";
 import Gallery from "../Gallery/Gallery";
+import Offer from "../Offer/Offer";
 
 
 const Home = ()=>{
@@ -14,6 +15,7 @@ const Home = ()=>{
             <Banner></Banner>
             <Gallery></Gallery>
             <Tabs></Tabs>
+            <Offer></Offer>
             
         </div>
     );

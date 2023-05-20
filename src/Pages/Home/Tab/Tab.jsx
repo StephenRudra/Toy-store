@@ -4,6 +4,7 @@ import 'react-tabs/style/react-tabs.css';
 
 const toyTab = ()=>{
   const [toys, setToys] = useState([]);
+  const [activeTab, setActiveTab] = useState("Excavation toys")
   useEffect(()=>{
     fetch('http://localhost:5000/toys')
     .then(res => res.json())
@@ -11,17 +12,27 @@ const toyTab = ()=>{
     .catch(error => console.log(error))
     
   }, [])
+
+  const handleClick = (tabName) =>{
+    setActiveTab(tabName)
+    console.log(activeTab)
+  }
+  const result = toys.filter((toy)=>toy.subCategory === activeTab);
+  console.log(result)
   return(
     <div>
       <h2>toyz{toys.length}</h2>
       <Tabs className='mb-10'>
       <TabList>
-        <Tab>table 1 
-          {
-            toys.map(toy => <h2>{toy.subCategory}</h2>)
-          }
+        
+        <Tab onClick={()=>handleClick("Excavation toys")}>Excavation toys
         </Tab>
-        <Tab>tabel 2</Tab>
+        
+        
+        <Tab onClick={()=>handleClick("Lifting")}>Crane</Tab>
+
+        
+        
       </TabList>
   
       <TabPanel>
