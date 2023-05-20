@@ -4,6 +4,7 @@ const Add = ()=>{
     const form = event.target;
     const name = form.name.value;
     const subCategory = form.category.value;
+    const email = form.email.value
     const price = form.price.value;
     const quantity = form.quantity.value;
     const seller = form.sellar.value;
@@ -11,7 +12,7 @@ const Add = ()=>{
     const photo = form.photo.value;
     const details = form.details.value;
 
-    const toys = {name, subCategory, price, quantity, seller, rating, photo, details};
+    const toys = {name, subCategory,email, price, quantity, seller, rating, photo, details};
     console.log(toys)
 
     fetch('http://localhost:5000/toys',{
@@ -52,9 +53,9 @@ const Add = ()=>{
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text text-2xl">Price</span>
+            <span className="label-text text-2xl">Email</span>
           </label>
-          <input type="text" placeholder="price" name="price" className="input input-bordered" />
+          <input type="email" placeholder="Enter email" name="email" className="input input-bordered" />
         </div>
          </div>
 
@@ -74,13 +75,17 @@ const Add = ()=>{
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text text-2xl">Rating</span>
+            <span className="label-text text-2xl">Price</span>
           </label>
-          <input type="text" placeholder="rating" name="rating" className="input input-bordered" />
+          <input type="text" placeholder="Enter price" name="price" className="input input-bordered" />
         </div>
         </div>
       </div>
       <div className="form-control ml-20 mr-20">
+      <label className="label">
+            <span className="label-text text-2xl">Rating</span>
+          </label>
+          <input type="text" placeholder="rating" name="rating" className="input input-bordered" />
           <label className="label">
             <span className="label-text text-2xl">Photo URL</span>
           </label>

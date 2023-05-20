@@ -36,11 +36,12 @@ const toyTab = ()=>{
       </TabList>
   
       <TabPanel>
-        <h2>{toys.map(toy => <Card key={toy._id} toy={toy}></Card>)}</h2>
+        <h2> <div className='flex gap-4 mt-10 ml-10'>{toys.map(toy => <Card key={toy._id} toy={toy}></Card>)}</div></h2>
       </TabPanel>
       <TabPanel>
-        <h2>{toys.map(toy => <Card key={toy._id} toy={toy}></Card>)}</h2>
+        <h2><div className='flex gap-4 mt-10 ml-10'>{toys.map(toy => <Card key={toy._id} toy={toy}></Card>)}</div></h2>
       </TabPanel>
+      
     </Tabs>
     </div>
   );

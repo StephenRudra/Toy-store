@@ -1,14 +1,14 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 const Card = ({toy})=>{
     //const toy = useLoaderData();
-    const {name, price, photo, details} = toy;
+    const {name, price, photo, details, _id} = toy;
     console.log(name)
     console.log(toy)
     return(
         <div>
-<h2></h2>
+
 <div className="card w-96 bg-base-100 shadow-xl">
   <figure><img src={photo} /></figure>
   <div className="card-body">
@@ -16,7 +16,10 @@ const Card = ({toy})=>{
     <h2 className="card-title">${price}</h2>
     <p>Short description:{details}</p>
     <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
+        <Link to={`/toy/${_id}`}>
+        <button className="btn btn-primary">View Details</button>
+        </Link>
+      
     </div>
   </div>
 </div>
