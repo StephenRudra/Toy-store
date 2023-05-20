@@ -6,7 +6,7 @@ const Blog = ()=>{
             <h2 className="text-5xl text-center p-5">Blog</h2>
            <div className="flex mb-5 ml-5">
            
-            <div className="bg-amber-200 w-1/2 mr-3">
+            <div className="bg-amber-200 w-1/2 mr-3 rounded p-5">
                 <h1 className="text-2xl ml-5">1. What is an access token and refresh token? How do they work and where should we store them on the client-side?</h1>
                 <p className="text-xl px-8">
                     Access tokens contain informations, server needed to know if the user can access the requested resource. It has short validity period.
@@ -20,7 +20,7 @@ const Blog = ()=>{
                     Access and refresh tokens can be stored in server side sessions.
                 </p>
 
-                <h1 className="text-2xl ml-5">2. Compare SQL and NoSQL databases?</h1>
+                <h1 className="text-2xl ml-5 mt-3">2. Compare SQL and NoSQL databases?</h1>
                 <p className="text-xl px-8">
                     SQL: <br />
                     1. Developed for file storage in 1970.<br />
@@ -37,11 +37,25 @@ const Blog = ()=>{
                     5. suitable for unstructed data or documents.<br />
                 </p>
             </div>
-            <div className="bg-lime-300 w-1/2 pl-1">
-                <h1>What is express js? What is Nest JS?</h1>
+            <div className="bg-lime-300 w-1/2 p-5 rounded">
+                <h1 className="text-2xl ml-5">3. What is express js? What is Nest JS?</h1>
+                <p className="text-xl px-8">
+                    ExpressJs acts as a bridge between front-end and a back-end of a web application. It is kind of media that processes data between
+                    this two and enables user to interact. It includes middleware, routing etc. which makes easy for the user to develop web application.
+                    In short, expressJs is free and open source framework built on node.Js to simplify building server-side web applications.<br />
+                    NestJs is another framework of NodeJs used for building efficient and scaleable web applications. It is known for producing
+                    highly testable maintainable web applications using JavaScript and TypeScript. It provides few tools like fastify or express.
+                    It also enables to use REST or GraphQL APIs.
+                </p>
 
 
-                <h1>What is MongoDB aggregate and how does it work?</h1>
+                <h1 className="text-2xl ml-5 mt-3">4. What is MongoDB aggregate and how does it work?</h1>
+                <p className="text-xl px-8">
+                    MongoDb aggregate is a process of processing large number of documents ina collection by means of passing them through different
+                    stages. This stage is called pipeline. This pipleline can filter, find, reshape etc. MongoDB aggregate assembales the data in different
+                    documents then executing in various ways. It uses pipeline for aggregating which definespossibilities of different operation.
+
+                </p>
             </div>
            </div>
         </div>
