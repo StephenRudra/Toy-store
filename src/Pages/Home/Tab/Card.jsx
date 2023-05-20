@@ -16,7 +16,7 @@ const Card = ({toy})=>{
     <h2 className="card-title">${price}</h2>
     <p>Short description:{details}</p>
     <div className="card-actions justify-end">
-        <Link to={`/toy/${_id}`}>
+        <Link to={`/details/${_id}`}>
         <button className="btn btn-primary">View Details</button>
         </Link>
       

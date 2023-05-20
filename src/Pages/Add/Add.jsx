@@ -1,10 +1,14 @@
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProviders";
+
 const Add = ()=>{
+  const {user} = useContext(AuthContext);
   const handleAdd= event => {
     event.preventDefault();
     const form = event.target;
     const name = form.name.value;
     const subCategory = form.category.value;
-    const email = form.email.value
+    const email = form.email.value;
     const price = form.price.value;
     const quantity = form.quantity.value;
     const seller = form.sellar.value;
