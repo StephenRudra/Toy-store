@@ -8,7 +8,7 @@ const Add = ()=>{
     const form = event.target;
     const name = form.name.value;
     const subCategory = form.category.value;
-    const email = form.email.value;
+    const email = user?.email;
     const price = form.price.value;
     const quantity = form.quantity.value;
     const seller = form.sellar.value;
@@ -59,7 +59,7 @@ const Add = ()=>{
           <label className="label">
             <span className="label-text text-2xl">Email</span>
           </label>
-          <input type="email" placeholder="Enter email" name="email" className="input input-bordered" />
+          <input type="email" placeholder="Enter email" name="email" defaultValue={user.email} className="input input-bordered" />
         </div>
          </div>
 
@@ -112,3 +112,5 @@ const Add = ()=>{
 };
 
 export default Add;
+
+//https://images-cdn.ubuy.co.in/633b622e74632203a52d77a6-top-race-excavator-toy-trucks.jpg
