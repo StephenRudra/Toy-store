@@ -1,6 +1,23 @@
 const MyTable = ({myToy})=>{
-    const {name, subCategory, price, quantity, email, seller, rating, photo, details} = myToy;
+    const {name, subCategory, price, quantity, email, seller, rating, photo, details, _id} = myToy;
+    const handleDelete = id =>{
+        const proceed = confirm("You sure you want to remove it?!")
+        if(proceed){
+            fetch(`http://localhost:5000/MyToy/${id}`,{
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if(data.deletedCount > 0){
+                    alert('Deletion Completed Succesfully')
+                }
+            })
+
+        }
+    }
     return(
+        
        <div>
           {/* row 1 */}
       <tr>
@@ -29,10 +46,10 @@ const MyTable = ({myToy})=>{
         <td>{rating}</td>
         <td>{details}</td>
         <th>
-          <button className="btn btn-ghost btn-xs">Update</button>
+          <button className="btn btn-accent btn-xs">Update</button>
         </th>
         <th>
-          <button className="btn btn-ghost btn-xs">Delete</button>
+          <button onClick={()=> handleDelete(_id)} className="btn btn-error btn-xs">Delete</button>
         </th>
       </tr>
 
