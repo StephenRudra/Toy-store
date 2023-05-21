@@ -3,9 +3,8 @@ import { Link, useLoaderData } from "react-router-dom";
 
 const Card = ({toy})=>{
     //const toy = useLoaderData();
-    const {name, price, photo, details, _id} = toy;
-    console.log(name)
-    console.log(toy)
+    const {name, price, photo, details, _id, rating} = toy;
+    
     return(
         <div>
 
@@ -13,8 +12,8 @@ const Card = ({toy})=>{
   <figure><img src={photo} className="w-3/4" /></figure>
   <div className="card-body">
     <h2 className="card-title">Toy name: {name}</h2>
-    <h2 className="card-title">${price}</h2>
-    <p>Short description:{details}</p>
+    <h2 className="font-medium"> Price: ${price}</h2>
+    <p>Rating: {rating}</p>
     <div className="card-actions justify-end">
         <Link to={`/details/${_id}`}>
         <button className="btn btn-primary">View Details</button>

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProviders";
+import { CgProfile } from "react-icons/Cg";
 
 const Nav = ()=>{
 
@@ -11,32 +12,17 @@ const Nav = ()=>{
     .catch(error=> console.log(error))
   }
   const Items = <>
+ 
   <li><Link to='/'>Home</Link></li>
   <li><Link to='/all'>All Toys</Link></li>
   <li><Link to='/blog'>Blog</Link></li>
   { user?.email? <><li><Link to='/add'>Add Toy</Link></li>
   <li><button onClick={handleLogOut} >Sign Out</button></li>
+  <li className="w-10 bg-info"><CgProfile></CgProfile></li>
   </>
   :<li><Link to='/login'>Login</Link></li>}
   <li><Link to='/sign'>Sign Up</Link></li>
   
- <li><div className="dropdown dropdown-end">
-      <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-          <img src={user?.photo} />
-        </div>
-      </label>
-      <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-slate-100 rounded-box w-52">
-        <li>
-          <a className="justify-between">
-            Profile
-            <span className="badge">New</span>
-          </a>
-        </li>
-        <li><a className="text-black"></a></li>
-        <li><a>Logout</a></li>
-      </ul>
-    </div></li> 
     <li><Link to="/mytoys">My Toys</Link></li>
   </>
     return(

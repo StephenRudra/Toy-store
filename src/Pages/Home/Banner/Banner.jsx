@@ -9,9 +9,9 @@ const Banner =()=>{
             <img src={b2} className="w-3/6 rounded-lg shadow-2xl absolute left-60 top-1/2 md:flex-col-1" />
     
             </div>
-            <div className='mt-8'>
+            <div className='mt-28'>
                 <h1 className='text-4xl'>Get construction toys here at a reasonable price</h1>
-                <h2 className='text-4xl'>Make your child's moments enjoyable!!</h2>
+                <h2 className='text-4xl mt-5'>Make your child's moments enjoyable!!</h2>
             </div>
             
 

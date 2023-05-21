@@ -4,6 +4,7 @@ import Tabs from "../Tab/Tab";
 import { useEffect, useState } from "react";
 import Gallery from "../Gallery/Gallery";
 import Offer from "../Offer/Offer";
+import Review from "../Review/Review";
 
 
 const Home = ()=>{
@@ -16,6 +17,7 @@ const Home = ()=>{
             <Gallery></Gallery>
             <Tabs></Tabs>
             <Offer></Offer>
+            <Review></Review>
             
         </div>
     );

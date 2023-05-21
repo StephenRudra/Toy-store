@@ -113,4 +113,3 @@ const Add = ()=>{
 
 export default Add;
 
-//https://images-cdn.ubuy.co.in/633b622e74632203a52d77a6-top-race-excavator-toy-trucks.jpg

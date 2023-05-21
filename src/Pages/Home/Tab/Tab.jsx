@@ -21,7 +21,7 @@ const toyTab = ()=>{
   
   return(
     <div>
-      <h2>toyz{toys.length}</h2>
+      
       <Tabs className='mb-10'>
       <TabList>
         
@@ -31,6 +31,8 @@ const toyTab = ()=>{
         
         <Tab onClick={()=>handleClick("Lifting")}>Lifting</Tab>
 
+        <Tab onClick={()=>handleClick("Set")}>Set</Tab>
+
         
         
       </TabList>
@@ -38,6 +40,10 @@ const toyTab = ()=>{
       <TabPanel>
         <h2> <div className='flex gap-4 mt-10 ml-10'>{toys.map(toy => <Card key={toy._id} toy={toy}></Card>)}</div></h2>
       </TabPanel>
+      <TabPanel>
+        <h2><div className='flex gap-4 mt-10 ml-10'>{toys.map(toy => <Card key={toy._id} toy={toy}></Card>)}</div></h2>
+      </TabPanel>
+
       <TabPanel>
         <h2><div className='flex gap-4 mt-10 ml-10'>{toys.map(toy => <Card key={toy._id} toy={toy}></Card>)}</div></h2>
       </TabPanel>
@@ -55,23 +61,3 @@ export default toyTab;
 
 
 
-{/*
-export default () => (
- 
-    <Tabs className='mb-10'>
-      <TabList>
-        <Tab>Title 1</Tab>
-        <Tab>Title 2</Tab>
-      </TabList>
-  
-      <TabPanel>
-        <h2>Any content 1</h2>
-      </TabPanel>
-      <TabPanel>
-        <h2>Any content 2</h2>
-      </TabPanel>
-    </Tabs>
-    
-  );
-*/}
-  
