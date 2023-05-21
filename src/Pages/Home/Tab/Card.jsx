@@ -10,7 +10,7 @@ const Card = ({toy})=>{
         <div>
 
 <div className="card w-96 bg-base-100 shadow-xl">
-  <figure><img src={photo} /></figure>
+  <figure><img src={photo} className="w-3/4" /></figure>
   <div className="card-body">
     <h2 className="card-title">Toy name: {name}</h2>
     <h2 className="card-title">${price}</h2>

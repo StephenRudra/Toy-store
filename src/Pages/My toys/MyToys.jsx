@@ -15,9 +15,8 @@ const MyToys = ()=>{
     },[])
     return(
         <div>
-            <h2>Mine {myToys.length}</h2>
-            <div className="overflow-x-auto w-full">
-  <table className="table w-full">
+            <div className="overflow-x-auto w-full mt-5 mb-5">
+  <table className="table w-80">
     {/* head */}
     <thead>
       <tr>
@@ -26,10 +25,14 @@ const MyToys = ()=>{
             <input type="checkbox" className="checkbox" />
           </label>
         </th>
-        <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
-        <th></th>
+        <th>Toy name</th>
+        <th>Sub-Category</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Email</th>
+        <th>Seller name</th>
+        <th>Ratings</th>
+        <th>Description</th>
       </tr>
     </thead>
     <tbody>

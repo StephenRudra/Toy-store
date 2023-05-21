@@ -14,31 +14,30 @@ const Nav = ()=>{
   <li><Link to='/'>Home</Link></li>
   <li><Link to='/all'>All Toys</Link></li>
   <li><Link to='/blog'>Blog</Link></li>
-  { user?.email?<li><button onClick={handleLogOut}>Sign Out</button></li>
+  { user?.email? <><li><Link to='/add'>Add Toy</Link></li>
+  <li><button onClick={handleLogOut} >Sign Out</button></li>
+  </>
   :<li><Link to='/login'>Login</Link></li>}
   <li><Link to='/sign'>Sign Up</Link></li>
-  <li><Link to='/add'>Add Toy</Link></li>
- <li><div className="dropdown dropdown-end bg-green-200">
+  
+ <li><div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
           <img src={user?.photo} />
         </div>
       </label>
-      <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+      <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-slate-100 rounded-box w-52">
         <li>
           <a className="justify-between">
             Profile
             <span className="badge">New</span>
           </a>
         </li>
-        <li><a className="text-black">Settings</a></li>
+        <li><a className="text-black"></a></li>
         <li><a>Logout</a></li>
       </ul>
     </div></li> 
     <li><Link to="/mytoys">My Toys</Link></li>
-  
-  
-  
   </>
     return(
       
@@ -62,7 +61,7 @@ const Nav = ()=>{
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Get started</a>
+    
   </div>
 </div>
         </div>
