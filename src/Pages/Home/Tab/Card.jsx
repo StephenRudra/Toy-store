@@ -2,7 +2,7 @@ import { Link, useLoaderData } from "react-router-dom";
 
 
 const Card = ({toy})=>{
-    //const toy = useLoaderData();
+    
     const {name, price, photo, details, _id, rating} = toy;
     
     return(
