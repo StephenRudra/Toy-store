@@ -11,12 +11,12 @@ const toyTab = ()=>{
     .then(res => res.json())
     .then(data => setToys(data))
     .catch(error => console.log(error))
-    console.log(toys)
+    
   }, [activeTab])
 
   const handleClick = (tabName) =>{
     setActiveTab(tabName)
-    console.log(activeTab)
+    
   }
   
   return(

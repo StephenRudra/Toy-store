@@ -8,7 +8,6 @@ import Login from "../Pages/Login/Login";
 import Add from "../Pages/Add/Add";
 import Blog from "../Pages/Home/Blog/Blog";
 import Details from "../Pages/Details/Details";
-import Toy from "../Pages/Toy/Toy";
 import AllToys from "../Pages/All Toys/AllToys";
 import MyToys from "../Pages/My toys/MyToys";
 import PrivateRoute from "./PrivateRoute";
