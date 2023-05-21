@@ -16,14 +16,15 @@ const Nav = ()=>{
   <li><Link to='/'>Home</Link></li>
   <li><Link to='/all'>All Toys</Link></li>
   <li><Link to='/blog'>Blog</Link></li>
+  <li><Link to='/sign'>Sign Up</Link></li>
   { user?.email? <><li><Link to='/add'>Add Toy</Link></li>
+  <li><Link to="/mytoys">My Toys</Link></li>
   <li><button onClick={handleLogOut} >Sign Out</button></li>
   <li className="w-10 bg-info"><CgProfile></CgProfile></li>
+  
   </>
   :<li><Link to='/login'>Login</Link></li>}
-  <li><Link to='/sign'>Sign Up</Link></li>
   
-    <li><Link to="/mytoys">My Toys</Link></li>
   </>
     return(
       

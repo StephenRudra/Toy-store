@@ -1,21 +1,6 @@
-const MyTable = ({myToy})=>{
+const MyTable = ({myToy, handleDelete})=>{
     const {name, subCategory, price, quantity, email, seller, rating, photo, details, _id} = myToy;
-    const handleDelete = id =>{
-        const proceed = confirm("You sure you want to remove it?!")
-        if(proceed){
-            fetch(`http://localhost:5000/MyToy/${id}`,{
-                method: 'DELETE'
-            })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if(data.deletedCount > 0){
-                    alert('Deletion Completed Succesfully')
-                }
-            })
-
-        }
-    }
+    
     return(
         
        <div>

@@ -13,6 +13,25 @@ const MyToys = ()=>{
         .then(res => res.json())
         .then(data=> setmyToys(data))
     },[])
+
+    const handleDelete = id =>{
+        const proceed = confirm("You sure you want to remove it?!")
+        if(proceed){
+            fetch(`http://localhost:5000/MyToy/${id}`,{
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if(data.deletedCount > 0){
+                    alert('Deletion Completed Succesfully')
+                    const remaining = myToys.filter(myToy => myToy._id !==id);
+                    setmyToys(remaining);
+                }
+            })
+
+        }
+    }
     return(
         <div>
             <div className="overflow-x-auto w-full mt-5 mb-5">
@@ -37,7 +56,7 @@ const MyToys = ()=>{
     </thead>
     <tbody>
     {
-        myToys.map(myToy => <MyTable key={myToy._id} myToy={myToy}></MyTable>)
+        myToys.map(myToy => <MyTable key={myToy._id} myToy={myToy} handleDelete={handleDelete}></MyTable>)
     }
     </tbody>
     
