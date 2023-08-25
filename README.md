@@ -1,7 +1,5 @@
 "# b7a11-toy-marketplace-client-side-StephenRudra" 
 
-### Live link:
-(https://toy-store-a2978.web.app)
 ### Features:
 * User signup and login
 * User can add toy
