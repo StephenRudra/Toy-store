@@ -8,7 +8,7 @@ const AllToys = ()=>{
     const {name,price} = Toys;
     return(
         <div>
-            <h2>All toys will be displayed here {Toys.length}</h2>
+            
             <div className="overflow-x-auto">
   <table className="table w-64 ml-8 mt-3">
     {/* head */}
